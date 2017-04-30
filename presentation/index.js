@@ -261,7 +261,7 @@ export default class Presentation extends React.Component {
           bgImage={images.background}
           bgDarken={0.8}
         >
-          <Heading size={6} textColor="tertiary" caps>How it works?</Heading>
+          <Heading size={6} textColor="tertiary" caps>How does it work?</Heading>
           <Appear>
             <BlockQuote margin="50px 0 0">
               <Quote>Just [use] Components</Quote>
