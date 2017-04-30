@@ -291,6 +291,9 @@ export default class Presentation extends React.Component {
               </ListItem>
             </List>
           </Appear>
+          <Appear>
+            <Heading size={3} margin="100px 0 0">🙌</Heading>
+          </Appear>
         </Slide>
         <Slide
           transition={["slide"]}
