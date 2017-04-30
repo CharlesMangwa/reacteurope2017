@@ -61,7 +61,7 @@ export default class Presentation extends React.Component {
         transition={["zoom", "fade"]}
         transitionDuration={500}
         theme={theme}
-        progress="number"
+        progress="bar"
       >
         <Slide
           transition={["slide"]}
