@@ -1,0 +1,9 @@
+// Tabs are routes too!
+<Tabs
+  title="What are you up to tonight 🤔?"
+  tabIndicatorStyle={{ borderColor: 'beer' }}
+>
+  <Tab path="/option1" component={Beer} />
+  <Tab path="/option2" component={Karaoke} />
+  <Tab path="/option3" component={ConfigureWebpackBruh} />
+</Tabs>

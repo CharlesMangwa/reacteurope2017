@@ -1,0 +1,8 @@
+// The core component
+<Navigation
+  title="MinionsGo!"
+  titleStyle={{ color: 'minionYellow' }}
+  backButtonTitle="Poopaye!"
+>
+  ...
+</Navigation>

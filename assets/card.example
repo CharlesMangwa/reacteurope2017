@@ -1,0 +1,12 @@
+// Navigate with react-router API
+<Navigation>
+  <Card
+    exact path="/app/feed"
+    component={Feed}
+  />
+  <Card
+    backButtonTintColor="minionYellow"
+    path=`app/feed/article/${id}`
+    component={Article}
+  />
+</Navigation>

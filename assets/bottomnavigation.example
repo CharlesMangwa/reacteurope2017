@@ -1,0 +1,20 @@
+<BottomNavigation>
+  <Tab
+    path="/app/home"
+    label="Home"
+    renderTabIcon={({ focused }) => <BottomNavIcon name="home" actived={focused} />}
+    component={Home}
+  />
+  <Tab
+    path="/app/search"
+    label="Search"
+    renderTabIcon={({ focused }) => <BottomNavIcon name="search" actived={focused} />}
+    component={Search}
+  />
+  <Tab
+    path="/app/profile"
+    label="Profile"
+    renderTabIcon={({ focused }) => <BottomNavIcon name="profile" actived={focused} />}
+    component={Profile}
+  />
+</BottomNavigation>
