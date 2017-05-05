@@ -2,19 +2,19 @@
   <Tab
     path="/app/home"
     label="Home"
-    renderTabIcon={({ focused }) => <BottomNavIcon name="home" actived={focused} />}
+    renderTabIcon={({ focused }) => <BottomNavIcon name="home" activated={focused} />}
     component={Home}
   />
   <Tab
     path="/app/search"
     label="Search"
-    renderTabIcon={({ focused }) => <BottomNavIcon name="search" actived={focused} />}
+    renderTabIcon={({ focused }) => <BottomNavIcon name="search" activated={focused} />}
     component={Search}
   />
   <Tab
     path="/app/profile"
     label="Profile"
-    renderTabIcon={({ focused }) => <BottomNavIcon name="profile" actived={focused} />}
+    renderTabIcon={({ focused }) => <BottomNavIcon name="profile" activated={focused} />}
     component={Profile}
   />
 </BottomNavigation>

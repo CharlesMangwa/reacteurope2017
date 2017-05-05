@@ -80,7 +80,7 @@ export default class Presentation extends React.Component {
                 textSize={30}
                 bold
               >
-                aka The Talk Where I Drive You Crazy With Insane Libraries Names 😁
+                aka The Talk Where I Drive You Crazy With Insane Library Names 😁
               </Text>
               <Text textColor="primary" margin="70px 0 0" textSize={25}>
                 @Charles_Mangwa
@@ -107,7 +107,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <Appear>
             <BlockQuote margin="50px 0 0">
-              <Quote>The smallest detail can f**ed up the whole experience bro!</Quote>
+              <Quote>The smallest detail can f**k up the whole experience bro!</Quote>
               <Cite>Léo Le Bras</Cite>
             </BlockQuote>
           </Appear>
@@ -167,7 +167,7 @@ export default class Presentation extends React.Component {
             </List>
           </Appear>
           <Appear>
-            <Heading size={3} margin="100px 0 0">👏</Heading>
+            <Heading size={3} margin="100px 0 0">🙌</Heading>
           </Appear>
         </Slide>
         <Slide
@@ -292,7 +292,7 @@ export default class Presentation extends React.Component {
             </List>
           </Appear>
           <Appear>
-            <Heading size={3} margin="100px 0 0">🙌</Heading>
+            <Heading size={3} margin="100px 0 0">👏👏👏</Heading>
           </Appear>
         </Slide>
         <Slide
