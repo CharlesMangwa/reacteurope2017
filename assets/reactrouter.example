@@ -1,0 +1,8 @@
+// React Router
+<NativeRouter>
+  <Switch>
+    <Route />
+    <Route />
+    <Route />
+  </Switch>
+</NativeRouter>

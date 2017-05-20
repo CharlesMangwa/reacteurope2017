@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="note-wrapper">
+        <h1>Thousand Ways to Navigate in React Native </h1>
+        <p><span class='hashtag'>￼#ReactEurope￼</span></p>
+        <br>
+        <hr>
+        <br>
+        <ul>
+            <li>Hi everyone! My name is Charles MANGWA, and today I’ll be talking about navigation in React Native apps
+            </li>
+        </ul>
+        <ul>
+            <li>Aka The Talk Where I Drive You Crazy With Insane Library Names
+            </li>
+        </ul>
+        <ul>
+            <li>So let me start by introducing myself real quick:
+                <ul>
+                    <li> As I said I’m Charles,
+                    </li>
+                    <li> I’m a student here in Paris,
+                    </li>
+                    <li> I’ve been a volunteer at this very conference for 3 years now and this year I’m on stage, giving my 1st
+                        talk ever, no pressure at all btw
+                    </li>
+                    <li> And I've discovered React Native back in June 2015 during a school project and wrote my 1st app ever,
+                        this Minions dictionary you can see right over there (<i>let's be honest: still my best achievement to this day!</i>).
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>As time went by, I realised how important a great navigation experience was.
+            </li>
+        </ul>So should you remember anything from my talk, let it be this quote from my good friend Léo Le Bras, which perfectly
+        describes the whole thing in my opinion.
+
+        <ul>
+            <li>Because React Native itself provides 3 solutions: Navigator, NavigatorIOS and NavigationExperimental
+            </li>
+        </ul>
+        <ul>
+            <li>But all of them are currently deprecated or not maintained anymore, which is a bummer.
+            </li>
+        </ul>
+        <ul>
+            <li>That’s why we’ve seen the rise of a couple navigation libraries for React Native …
+            </li>
+        </ul>
+        <ul>
+            <li><i>And Don’t worry: this is a drop in the ocean of what you can find on NPM … and that’s the part of the talk where you should start understanding itd title</i>
+            </li>
+        </ul>
+        <ul>
+            <li>So, some names like <code class='code-inline'>react-navigation</code> or <code class='code-inline'>react-native-router-flux</code>                might be familiar to you already, because they are very popular today.
+            </li>
+        </ul>
+        <ul>
+            <li>Same goes for <code class='code-inline'>react-native-navigation</code> and <code class='code-inline'>native-navigation</code>                which are the only 2 native solutions that are still maintained! I think they clearly deserve a « Bravo! »
+                for that.
+            </li>
+        </ul>
+        <ul>
+            <li>But, since June 2016 I’d been working on a project with Léo, and none of those were exactly what we needed.
+            </li>
+        </ul>
+        <ul>
+            <li>So the project is called Wino. It’s an app that helps you find the wine you should buy, according to where and
+                when you’ll be drinking it, only available on iOS for now and 100% written in React Native.
+            </li>
+        </ul>
+        <ul>
+            <li>When we were building the app, among all these libraries, one really caught our attention: <code class='code-inline'>react-router-native</code>.
+            </li>
+        </ul>
+        <ul>
+            <li>The reason we loved it that much fits in 2 words actually: <code class='code-inline'>Just Components™</code>.
+                That’s everything you need, in order to use <code class='code-inline'>react-router</code> since their v4.
+            </li>
+        </ul>
+        <ul>
+            <li>So, in terms of navigation in React Native, this meant that every single component could potentially be considered
+                a full-fledged route, and enables a bunch of possibilities we had never seen before in React Native.
+            </li>
+        </ul>
+        <ul>
+            <li>The only drawback was that it doesn’t ship with a navigation structure. Which means that you cannot use it in
+                React Native to navigate between your screens with all the fancy animations we love so much. <i>Yeah, I think some of you might see where I’m going with this 😏…</i>
+            </li>
+        </ul>
+        <ul>
+            <li>Well, after nearly 10 months of hard work, with 9 of them spent looking for an available package name on NPM,
+                here’s the result of this work : <code class='code-inline'>react-router-navigation</code> v.1 is available!
+            </li>
+        </ul>
+        <ul>
+            <li>The idea is fairly simple here: keep the Just Components™ spirit of <code class='code-inline'>react-router</code>                and just add mobile navigation on top of it. So we consider it more of an add-on than a proper navigation
+                library itself.
+            </li>
+        </ul>
+        <ul>
+            <li><code class='code-inline'>react-router-navigation</code> offers 6 different components:
+            </li>
+        </ul>
+        <ol>
+            <li><span class='ordered-list-number'>1.</span> We have <code class='code-inline'><Navigation /></code> which renders
+                one screen at a time and provides transitions between screens
+            </li>
+        </ol><img src='Thousand%20Ways%20to%20Navigate%20in%20React%20Native/Capture%20d%E2%80%99e%CC%81cran%202017-04-22%20a%CC%80%2011.46.00.png'>
+        <ol>
+            <li><span class='ordered-list-number'>1.</span> These screens which are in turn wrapped into our 2nd component: the
+                <code class='code-inline'><Card /></code> component.
+            </li>
+        </ol> So, what you see here is the simplest way to get up and running with <code class='code-inline'>react-router-navigation</code>        : you just use a single <code class='code-inline'><Navigation /></code> component, and pass as many <code class='code-inline'><Cards /></code>        as you want inside of it. And we use the exact same API than <code class='code-inline'>react-router</code>, so you
+        don’t have to learn something else.
+        <img src='Thousand%20Ways%20to%20Navigate%20in%20React%20Native/Capture%20d%E2%80%99e%CC%81cran%202017-04-22%20a%CC%80%2012.02.09.png'>
+        <ol>
+            <li><span class='ordered-list-number'>1.</span> The next 2 components are quite similar <code class='code-inline'><Tabs /></code>                and <code class='code-inline'><Tab /></code>. If you’ve ever struggled navigating inside tab views: this
+                is for you!
+            </li>
+        </ol><img src='Thousand%20Ways%20to%20Navigate%20in%20React%20Native/Capture%20d%E2%80%99e%CC%81cran%202017-04-22%20a%CC%80%2012.37.14.png'>
+        <ol>
+            <li><span class='ordered-list-number'>1.</span> And last but not least, the core element of the navigation in a mobile
+                application, the bottom navigation bar:
+            </li>
+        </ol><img src='Thousand%20Ways%20to%20Navigate%20in%20React%20Native/Capture%20d%E2%80%99e%CC%81cran%202017-04-22%20a%CC%80%2012.41.54.png'>
+
+        <ul>
+            <li>The great thing with <code class='code-inline'>react-router-navigation</code> is how simple and powerful it is,
+                because in the end: we’re just using components, as promised! So if you’ve already written a React JS or
+                React Native app: well, you already know how to use it!
+            </li>
+        </ul>
+        <ul>
+            <li>Now for the shoutouts, because we have to give props to all those great people working on libraries we rely on,
+            </li>
+        </ul>
+        <ul>
+            <li>I’m talking about <code class='code-inline'>react-router</code> , <code class='code-inline'>react-navigation</code>                and <code class='code-inline'>react-native-tab-view</code> we use for navigation, transitions, routing, tab
+                bars, deep linking, and a bunch of other cool stuff. So: let's give a round of applause to everyone working
+                on these libraries please!
+            </li>
+        </ul>
+        <ul>
+            <li>If you want more details about <code class='code-inline'>react-router-navigation</code> because I couldn't put
+                everything in this talk, I’ve just published a Medium post where I take it further and add some real-world
+                examples.
+            </li>
+        </ul>
+        <ul>
+            <li> Don’t hesitate if you have any questions, Leo is somewhere around, I’ll be at the afterparty and you can find
+                us on Twitter. Thank you all for your time!</li>
+        </ul>
+    </div>
+
+    <style>
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            vertical-align: baseline
+        }
+
+        html {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        caption,
+        th,
+        td {
+            text-align: left;
+            font-weight: normal;
+            vertical-align: middle
+        }
+
+        q,
+        blockquote {
+            quotes: none
+        }
+
+        q:before,
+        q:after,
+        blockquote:before,
+        blockquote:after {
+            content: "";
+            content: none
+        }
+
+        a img {
+            border: none
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        main,
+        menu,
+        nav,
+        section,
+        summary {
+            display: block
+        }
+
+        * {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        html {
+            font-size: 87.5%;
+            line-height: 1.57143em
+        }
+
+        html {
+            font-size: 14px;
+            line-height: 1.6em;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            background: #fcfcfc;
+            color: #545454;
+            text-rendering: optimizeLegibility;
+            font-family: "Avenir-Book"
+        }
+
+        a {
+            color: #de4c4f;
+            text-decoration: none
+        }
+
+        h1 {
+            font-family: "Avenir-Medium";
+            color: #333;
+            font-size: 1.6em;
+            line-height: 1.3em;
+            margin-bottom: .78571em
+        }
+
+        h2 {
+            font-family: "Avenir-Medium";
+            color: #333;
+            font-size: 1.3em;
+            line-height: 1em;
+            margin-bottom: .62857em
+        }
+
+        h3 {
+            font-family: "Avenir-Medium";
+            color: #333;
+            font-size: 1.15em;
+            line-height: 1em;
+            margin-bottom: .47143em
+        }
+
+        p {
+            margin-bottom: 1.57143em;
+            hyphens: auto
+        }
+
+        hr {
+            height: 1px;
+            border: 0;
+            background-color: #dedede;
+            margin: -1px auto 1.57143em auto
+        }
+
+        ul,
+        ol {
+            margin-bottom: 1.57143em
+        }
+
+        ul ul,
+        ul ol,
+        ol ul,
+        ol ol {
+            margin-bottom: 0px
+        }
+
+        b,
+        strong {
+            font-family: "Avenir-Heavy"
+        }
+
+        i,
+        em {
+            font-family: "Avenir-BookOblique"
+        }
+
+        code {
+            font-family: "Menlo-Regular"
+        }
+
+        .text-overflow-ellipsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+
+        .sf_code_syntax_string {
+            color: #D33905
+        }
+
+        .sf_code_syntax_comment {
+            color: #838383
+        }
+
+        .sf_code_syntax_documentation_comment {
+            color: #128901
+        }
+
+        .sf_code_syntax_number {
+            color: #0E73A2
+        }
+
+        .sf_code_syntax_project {
+            color: #5B2599
+        }
+
+        .sf_code_syntax_keyword {
+            color: #0E73A2
+        }
+
+        .sf_code_syntax_character {
+            color: #1B00CE
+        }
+
+        .sf_code_syntax_preprocessor {
+            color: #920448
+        }
+
+        .note-wrapper {
+            max-width: 46em;
+            margin: 0px auto;
+            padding: 1.57143em 3.14286em
+        }
+
+        .note-wrapper.spotlight-preview {
+            overflow-x: hidden
+        }
+
+        u {
+            text-decoration: none;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #e06e73 50%);
+            background-repeat: repeat-x;
+            background-size: 2px 2px;
+            background-position: 0 1.05em
+        }
+
+        s {
+            color: #878787
+        }
+
+        p {
+            margin-bottom: 0.1em
+        }
+
+        hr {
+            margin-bottom: 0.7em;
+            margin-top: 0.7em
+        }
+
+        ul li {
+            text-indent: -0.6em
+        }
+
+        ul li:before {
+            content: "•";
+            color: #e06e73;
+            display: inline-block;
+            margin-right: 0.3em
+        }
+
+        ul ul {
+            margin-left: 1.25714em
+        }
+
+        ol li {
+            text-indent: -1.25em
+        }
+
+        ol ol {
+            margin-left: 1.25714em
+        }
+
+        blockquote {
+            display: block;
+            margin-left: -1em;
+            padding-left: 0.8em;
+            border-left: 0.2em solid #e06e73
+        }
+
+        .todo-list ul {
+            margin-left: 1.88571em
+        }
+
+        .todo-list li {
+            text-indent: -1.75em
+        }
+
+        .todo-list li:before {
+            content: "";
+            display: static;
+            margin-right: 0px
+        }
+
+        .todo-checkbox {
+            text-indent: -1.7em
+        }
+
+        .todo-checkbox svg {
+            margin-right: 0.3em;
+            position: relative;
+            top: 0.2em
+        }
+
+        .todo-checkbox svg #check {
+            display: none
+        }
+
+        .todo-checkbox.todo-checked #check {
+            display: inline
+        }
+
+        .todo-checkbox.todo-checked .todo-text {
+            text-decoration: line-through;
+            color: #878787
+        }
+
+        .code-inline {
+            display: inline-block;
+            background: white;
+            border: solid 1px #dedede;
+            padding: 0.0em 0.5em;
+            font-size: 0.9em
+        }
+
+        .code-multiline {
+            display: block;
+            background: white;
+            border: solid 1px #dedede;
+            padding: 0.7em 1em;
+            font-size: 0.9em;
+            overflow-x: auto
+        }
+
+        .hashtag {
+            display: inline-block;
+            color: white;
+            background: #b8bfc2;
+            padding: 0.0em 0.5em;
+            border-radius: 1em
+        }
+
+        .hashtag a {
+            color: #fff
+        }
+
+        .address a {
+            color: #545454;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #0da35e 50%);
+            background-repeat: repeat-x;
+            background-size: 2px 2px;
+            background-position: 0 1.05em
+        }
+
+        .address svg {
+            position: relative;
+            top: 0.2em;
+            display: inline-block;
+            margin-right: 0.2em
+        }
+
+        .color-preview {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            border: solid 1px rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            margin-right: 0.1em;
+            position: relative;
+            top: 0.2em;
+            white-space: nowrap
+        }
+
+        .color-code {
+            margin-right: 0.2em;
+            font-family: "Menlo-Regular";
+            font-size: 0.9em
+        }
+
+        .color-hash {
+            opacity: 0.4
+        }
+
+        .ordered-list-number {
+            color: #e06e73;
+            text-align: right;
+            display: inline-block;
+            min-width: 1em
+        }
+
+        .arrow svg {
+            position: relative;
+            top: 0.08em;
+            display: inline-block;
+            margin-right: 0.15em;
+            margin-left: 0.15em
+        }
+
+        .arrow svg #rod {
+            stroke: #545454
+        }
+
+        .arrow svg #point {
+            fill: #545454
+        }
+
+        img {
+            max-width: 100%;
+            height: auto
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+// React Router Navigation
+<NativeRouter>
+  <Navigation>
+    <Card />
+    <Card />
+    <Card />
+  </Navigation>
+</NativeRouter>
